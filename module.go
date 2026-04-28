@@ -78,7 +78,7 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 				}
 			case "view":
 				if d.NextArg() {
-					p.Provider.Password = d.Val()
+					p.Provider.View = d.Val()
 				} else {
 					return d.ArgErr()
 				}
