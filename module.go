@@ -31,11 +31,13 @@ func (p *Provider) Provision(ctx caddy.Context) error {
 	p.Provider.Version = caddy.NewReplacer().ReplaceAll(p.Provider.Version, "")
 	p.Provider.Username = caddy.NewReplacer().ReplaceAll(p.Provider.Username, "")
 	p.Provider.Password = caddy.NewReplacer().ReplaceAll(p.Provider.Password, "")
+	p.Provider.View = caddy.NewReplacer().ReplaceAll(p.Provider.View, "default")
 
 	p.logger.Info("Infoblox DNS provider configured",
 		zap.String("host", p.Provider.Host),
 		zap.String("version", p.Provider.Version),
-		zap.String("username", p.Provider.Username))
+		zap.String("username", p.Provider.Username),
+        zap.String("view", p.Provider.View))
 
 	return nil
 }
