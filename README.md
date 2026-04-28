@@ -25,7 +25,8 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 				"host": "INFOBLOX_HOST",
                 "version": "INFOBLOX_VERSION",
                 "username": "INFOBLOX_USERNAME",
-                "password": "INFOBLOX_PASSWORD"
+                "password": "INFOBLOX_PASSWORD",
+                "view": "INFOBLOX_VIEW"
 			}
 		}
 	}
@@ -41,6 +42,7 @@ tls {
 		version {env.INFOBLOX_VERSION}
 		username {env.INFOBLOX_USERNAME}
 		password {env.INFOBLOX_PASSWORD}
+        view {env.INFOBLOX_VIEW}
 	}
 }
 ```
