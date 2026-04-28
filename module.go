@@ -76,6 +76,12 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 				} else {
 					return d.ArgErr()
 				}
+			case "view":
+				if d.NextArg() {
+					p.Provider.Password = d.Val()
+				} else {
+					return d.ArgErr()
+				}
 			default:
 				return d.Errf("unrecognized subdirective '%s'", d.Val())
 			}
