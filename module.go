@@ -1,7 +1,7 @@
 package infoblox
 
 import (
-	infoblox "github.com/bootswithdefer/libdns-infoblox"
+	infoblox "github.com/lfitt/libdns-infoblox"
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"go.uber.org/zap"
