@@ -1,9 +1,9 @@
-module github.com/bootswithdefer/caddydns-infoblox
+module github.com/lfitt/caddydns-infoblox
 
 go 1.25
 
 require (
-	github.com/bootswithdefer/libdns-infoblox v1.0.3
+	github.com/lfitt/libdns-infoblox v1.0.3
 	github.com/caddyserver/caddy/v2 v2.10.2
 	go.uber.org/zap v1.27.1
 )
